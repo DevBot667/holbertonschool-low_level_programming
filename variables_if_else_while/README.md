@@ -12,3 +12,4 @@
 - `9-print_comb.c`: C program that prints all possible combinations of single-digit numbers separated by a comma and a space, followed by a new line.
 - `100-print_comb3.c`: C program that prints all possible different combinations of two digits in ascending order, separated by a comma and a space, followed by a new line.
 - `101-print_comb4.c`: C program that prints all possible different combinations of three digits in ascending order, separated by a comma and a space, followed by a new line.
+- `102-print_comb5.c`: C program that prints all possible combinations of two two-digit numbers ranging from 0 to 99, separated by a space and a comma, followed by a new line.
