@@ -11,3 +11,4 @@
 - `8-print_base16.c`: C program that prints all the numbers of base 16 in lowercase, followed by a new line.
 - `9-print_comb.c`: C program that prints all possible combinations of single-digit numbers separated by a comma and a space, followed by a new line.
 - `100-print_comb3.c`: C program that prints all possible different combinations of two digits in ascending order, separated by a comma and a space, followed by a new line.
+- `101-print_comb4.c`: C program that prints all possible different combinations of three digits in ascending order, separated by a comma and a space, followed by a new line.
