@@ -14,7 +14,7 @@ int	main(void)
 	int j;
 
 	i = 0;
-	while (i <=98)
+	while (i <= 98)
 	{
 		j = i + 1;
 		while (j <= 99)
