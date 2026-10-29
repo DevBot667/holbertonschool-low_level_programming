@@ -16,7 +16,8 @@ void print_menu(void)
 /**
  * main - Entry point of the calculator
  *
- * Description: Displays a menu in a loop until the user chooses 0
+ * Description: Displays the menu once, then asks for a choice
+ * in a loop until the user chooses 0
  *
  * Return: Always 0 (Success)
  */
@@ -26,9 +27,9 @@ int main(void)
 	int ret;
 
 	choice = -1;
+	print_menu();
 	while (choice != 0)
 	{
-		print_menu();
 		printf("Choice: ");
 		ret = scanf("%d", &choice);
 		if (ret != 1 || choice < 0 || choice > 4)

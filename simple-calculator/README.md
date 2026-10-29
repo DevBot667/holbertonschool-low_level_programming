@@ -25,4 +25,5 @@ Not defined yet (operations are not implemented).
 ## Known limitations
 
 - Only the menu choice is validated: it must be an integer between 0 and 4.
+- Any integer outside this range prints `Invalid choice` and the program asks again.
 - Non-numeric input (for example `x` or `hello`) is not handled and may make the program loop indefinitely.
