@@ -28,9 +28,14 @@ The program displays a menu, then asks for a choice in a loop until `0` is enter
 
 The calculator uses decimal numbers (`double`) for all operations, so both integers and decimals are accepted. Results are printed with `%g`: `10 + 25` prints `35`, `10 - 25` prints `-15`, `7 * 6` prints `42`, and `10 / 4` prints `2.5`. Division is a real division, not an integer division.
 
+## Input handling
+
+- The menu choice must be an integer between 0 and 4. Anything else (a number out of range or non-numeric text such as `x`) prints `Invalid choice` and the program asks again.
+- If an operand is not a number, `Invalid number` is printed and the same operand is asked again.
+- After each read, the rest of the input line is discarded with `getchar()`, so invalid text never stays in the input buffer and the program never loops on the same token.
+- If the input ends (EOF, for example with Ctrl+D), the program prints `Bye!` and exits.
+
 ## Known limitations
 
-- The menu choice must be an integer between 0 and 4. Any other integer prints `Invalid choice` and the program asks again.
-- Non-numeric menu input (for example `x` or `hello`) is not handled and may make the program loop indefinitely.
-- If an operand is not a number, `Invalid input` is printed and the program returns to the menu, but the invalid text stays in the input buffer.
+- Each value must be typed on its own line: anything typed after the first value on the same line is discarded.
 - `%g` prints at most 6 significant digits, so very large or very precise results are rounded.
