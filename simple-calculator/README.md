@@ -22,11 +22,11 @@ The program displays a menu, then asks for a choice in a loop until `0` is enter
 - `1`: Add (reads A and B, prints A + B)
 - `2`: Subtract (reads A and B, prints A - B)
 - `3`: Multiply (reads A and B, prints A * B)
-- `4`: Divide (not implemented yet)
+- `4`: Divide (reads A and B, prints A / B; prints `Error: division by zero` if B is 0)
 
 ## Numeric behavior
 
-Operands are read as decimal numbers (`double`), so both integers and decimals are accepted. Results are printed with `%g`: `10 + 25` prints `35`, `10 - 25` prints `-15`, `7 * 6` prints `42`, and `1.5 + 2` prints `3.5`.
+The calculator uses decimal numbers (`double`) for all operations, so both integers and decimals are accepted. Results are printed with `%g`: `10 + 25` prints `35`, `10 - 25` prints `-15`, `7 * 6` prints `42`, and `10 / 4` prints `2.5`. Division is a real division, not an integer division.
 
 ## Known limitations
 

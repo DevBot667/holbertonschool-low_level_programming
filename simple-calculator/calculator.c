@@ -32,9 +32,10 @@ int read_operands(double *a, double *b)
 }
 
 /**
- * do_add - Reads two numbers and prints their sum
+ * do_operation - Reads two numbers and prints the result of an operation
+ * @choice: The menu choice (1 add, 2 subtract, 3 multiply, 4 divide)
  */
-void do_add(void)
+void do_operation(int choice)
 {
 	double a, b;
 
@@ -43,37 +44,16 @@ void do_add(void)
 		printf("Invalid input\n");
 		return;
 	}
-	printf("Result: %g\n", a + b);
-}
-
-/**
- * do_subtract - Reads two numbers and prints their difference
- */
-void do_subtract(void)
-{
-	double a, b;
-
-	if (!read_operands(&a, &b))
-	{
-		printf("Invalid input\n");
-		return;
-	}
-	printf("Result: %g\n", a - b);
-}
-
-/**
- * do_multiply - Reads two numbers and prints their product
- */
-void do_multiply(void)
-{
-	double a, b;
-
-	if (!read_operands(&a, &b))
-	{
-		printf("Invalid input\n");
-		return;
-	}
-	printf("Result: %g\n", a * b);
+	if (choice == 1)
+		printf("Result: %g\n", a + b);
+	else if (choice == 2)
+		printf("Result: %g\n", a - b);
+	else if (choice == 3)
+		printf("Result: %g\n", a * b);
+	else if (b == 0)
+		printf("Error: division by zero\n");
+	else
+		printf("Result: %g\n", a / b);
 }
 
 /**
@@ -100,19 +80,9 @@ int main(void)
 			printf("Invalid choice\n");
 			choice = -1;
 		}
-		else if (choice == 1)
+		else if (choice != 0)
 		{
-			do_add();
-			print_menu();
-		}
-		else if (choice == 2)
-		{
-			do_subtract();
-			print_menu();
-		}
-		else if (choice == 3)
-		{
-			do_multiply();
+			do_operation(choice);
 			print_menu();
 		}
 	}
