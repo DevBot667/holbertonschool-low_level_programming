@@ -47,6 +47,21 @@ void do_add(void)
 }
 
 /**
+ * do_subtract - Reads two numbers and prints their difference
+ */
+void do_subtract(void)
+{
+	double a, b;
+
+	if (!read_operands(&a, &b))
+	{
+		printf("Invalid input\n");
+		return;
+	}
+	printf("Result: %g\n", a - b);
+}
+
+/**
  * main - Entry point of the calculator
  *
  * Description: Displays the menu, then asks for a choice
@@ -73,6 +88,11 @@ int main(void)
 		else if (choice == 1)
 		{
 			do_add();
+			print_menu();
+		}
+		else if (choice == 2)
+		{
+			do_subtract();
 			print_menu();
 		}
 	}

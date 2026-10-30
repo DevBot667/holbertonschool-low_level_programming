@@ -14,13 +14,15 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 calculator.c -o calculator
 
 - `0`: Quit
 - `1`: Add (reads A and B, prints A + B)
-- `2`: Subtract (not implemented yet)
+- `2`: Subtract (reads A and B, prints A - B)
 - `3`: Multiply (not implemented yet)
 - `4`: Divide (not implemented yet)
 
 ## Numeric behavior
 
 Operands are read as decimal numbers (`double`), so both integers and decimals are accepted. Results are printed with `%g`: `10 + 25` prints `35`, and `1.5 + 2` prints `3.5`.
+
+Operands are read as decimal numbers (`double`), so both integers and decimals are accepted. Results are printed with `%g`: `10 + 25` prints `35`, `10 - 25` prints `-15`, and `1.5 + 2` prints `3.5`.
 
 ## Known limitations
 
